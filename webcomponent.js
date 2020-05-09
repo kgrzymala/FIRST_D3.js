@@ -2,20 +2,6 @@
 	
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Components - KG</title>
-    <script src="https://d3js.org/d3.v4.js"></script>
-</head>
-<body>
-    <svg> 
-        <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
-      </svg>
-
-
-
-</body>
     `;
 
 
