@@ -17221,7 +17221,7 @@ d3
   .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
 </script>
         `
-	    d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "purple");
+	    d3.select(".target").("stroke-width", 10);
      
 	    
 	    
