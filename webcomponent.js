@@ -17237,8 +17237,7 @@ d3
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
                 this.redraw();
-		d3.select(".target");  // select the elements that have the class 'target'
-		d3.style("stroke-width", 8);
+d3.select("body").append("svg").attr("width", 50).attr("height", 50).append("circle").attr("cx", 25).attr("cy", 25).attr("r", 25).style("fill", "purple");
             }
 		
 		}
