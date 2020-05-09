@@ -6,7 +6,7 @@
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 <!DOCTYPE html>
-<h1>First d3.js chart in SAC BASIC v4_separated</h1>
+<h1>First d3.js chart in SAC BASIC v1_separated_d3_top</h1>
 <!-- Add a bit of text -->
 <p>to be investigated further</p>
 <!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
