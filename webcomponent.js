@@ -35,12 +35,16 @@ class WidgetTemplate extends HTMLElement {
         connectedCallback(){
             this._firstConnection = true;
             this.redraw();
-		
-	<script>       
+	    this.shadowRoot.innerHTML = `
+            <script>       
 d3
   .select(".target")  // select the elements that have the class 'target'
   .style("stroke-width", 10) // change their style: stroke width is not equal to 8 pixels
-</script>	
+</script>
+        `
+		
+		
+		
 		
 		
 		
