@@ -23,7 +23,7 @@ class WidgetTemplate extends HTMLElement {
             this.redraw();
 	    this.shadowRoot.innerHTML = `
 <!DOCTYPE html>
-<h1>First html document</h1>
+<h1>First html document from custom element</h1>
 
 <!-- Add a bit of text -->
 <p>This is my first sentence</p>
