@@ -2,7 +2,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 <!DOCTYPE html>
-<h1>First d3.js chart in SAC</h1>
+<h1>First d3.js chart in SAC v2</h1>
 
 <!-- Add a bit of text -->
 <p>to be investigated further</p>
