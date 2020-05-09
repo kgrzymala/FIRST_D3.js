@@ -17180,26 +17180,6 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-    `;
-
-
-class WidgetTemplate extends HTMLElement {
-
-
-		constructor() {
-			super(); 
-			let shadowRoot = this.attachShadow({mode: "open"});
-			shadowRoot.appendChild(tmpl.content.cloneNode(true));
-			
-		
-		}
-
-
-        //Fired when the widget is added to the html DOM of the page
-        connectedCallback(){
-            this._firstConnection = true;
-            
-	    this.shadowRoot.innerHTML = `
 <!DOCTYPE html>
 <html>
 <head>
@@ -17220,7 +17200,26 @@ class WidgetTemplate extends HTMLElement {
     </script>
 </body>
 </html>
-        `;
+        ` 
+    ;
+
+
+class WidgetTemplate extends HTMLElement {
+
+
+		constructor() {
+			super(); 
+			let shadowRoot = this.attachShadow({mode: "open"});
+			shadowRoot.appendChild(tmpl.content.cloneNode(true));
+			
+		
+		}
+
+
+        //Fired when the widget is added to the html DOM of the page
+        connectedCallback(){
+            this._firstConnection = true;
+                
 		this.redraw();
      
 	    
