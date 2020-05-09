@@ -13,11 +13,8 @@ let tmpl = document.createElement('template');
         <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
       </svg>
 
-      <script>
-        d3
-          .select(".target")  // select the elements that have the class 'target'
-          .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
-        </script>
+
+
 </body>
     `;
 
@@ -49,7 +46,14 @@ class WidgetTemplate extends HTMLElement {
             if (this._firstConnection){
                 this.redraw();
             }
-        }
+        
+		      <script>
+d3
+  .select(".target")  // select the elements that have the class 'target'
+  .style("stroke-width", 10) // change their style: stroke width is not equal to 8 pixels
+</script>
+		
+		}
         
             redraw(){
         }
