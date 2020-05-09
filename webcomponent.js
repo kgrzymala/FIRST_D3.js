@@ -2,10 +2,10 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 <!DOCTYPE html>
-<h1>First html document</h1>
+<h1>First d3.js chart in SAC</h1>
 
 <!-- Add a bit of text -->
-<p>This is my first sentence</p>
+<p>to be investigated further</p>
 
 <!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
 <svg> 
@@ -18,7 +18,7 @@
 <script>
 d3
   .select(".target")  // select the elements that have the class 'target'
-  .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
+  .style("stroke-width", 15) // change their style: stroke width is not equal to 8 pixels
 </script>
 
     `;
