@@ -5,8 +5,6 @@
 	
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +22,6 @@ let tmpl = document.createElement('template');
           .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
         </script>
 </body>
-</html>
     `;
 
 
