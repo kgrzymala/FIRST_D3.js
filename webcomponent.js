@@ -17237,6 +17237,8 @@ d3
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
                 this.redraw();
+		d3.select(".target");  // select the elements that have the class 'target'
+		d3.style("stroke-width", 8);
             }
 		
 		}
