@@ -36,6 +36,21 @@ class WidgetTemplate extends HTMLElement {
             this._firstConnection = true;
             this.redraw();
 	    this.shadowRoot.innerHTML = `
+<!DOCTYPE html>
+<h1>First html document</h1>
+
+<!-- Add a bit of text -->
+<p>This is my first sentence</p>
+
+<!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
+<svg> 
+  <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
+</svg>
+
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+
 <script>
 d3
   .select(".target")  // select the elements that have the class 'target'
