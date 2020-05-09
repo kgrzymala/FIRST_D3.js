@@ -2,6 +2,7 @@
 	
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
+ <p style="text-align:right">This is some text in a paragraph.</p> 
     `;
 
 
