@@ -17198,7 +17198,7 @@ class WidgetTemplate extends HTMLElement {
         //Fired when the widget is added to the html DOM of the page
         connectedCallback(){
             this._firstConnection = true;
-            this.redraw();
+            
 	    this.shadowRoot.innerHTML = `
 <!DOCTYPE html>
 <html>
@@ -17221,6 +17221,7 @@ class WidgetTemplate extends HTMLElement {
 </body>
 </html>
         `;
+		this.redraw();
      
 	    
 	    
