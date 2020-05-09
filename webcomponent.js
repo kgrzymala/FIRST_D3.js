@@ -17201,27 +17201,26 @@ class WidgetTemplate extends HTMLElement {
             this.redraw();
 	    this.shadowRoot.innerHTML = `
 <!DOCTYPE html>
-<h1>First html document from custom element</h1>
+<html>
+<head>
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        var lineData = [ { "x": 1,   "y": 5},  { "x": 20,  "y": 20}, { "x": 40,  "y": 10}, { "x": 60,  "y": 40}, { "x": 80,  "y": 5},  { "x": 100, "y": 60}];
 
-<!-- Add a bit of text -->
-<p>This is my first sentence</p>
+        //This is the accessor function we talked about above
+        var lineFunction = d3.svg.line().x(function(d) { return d.x; }).y(function(d) { return d.y; }).interpolate("linear");
 
-<!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
-<svg> 
-  <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
-</svg>
+        //The SVG Container
+        var svgContainer = d3.select("body").append("svg").attr("width", 200).attr("height", 200);
 
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
-
-
-<script>
-d3
-  .select(".target")  // select the elements that have the class 'target'
-  .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
-</script>
-        `
-	    d3.select(".target").("stroke-width", 10);
+        //The line SVG Path we draw
+        var lineGraph = svgContainer.append("path").attr("d", lineFunction(lineData)).attr("stroke", "blue").attr("stroke-width", 2).attr("fill", "none");
+    </script>
+</body>
+</html>
+        `;
      
 	    
 	    
