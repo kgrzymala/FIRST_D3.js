@@ -32,6 +32,13 @@ d3
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
 			shadowRoot.appendChild(tmpl.content.cloneNode(true));
+			
+			<script>
+d3
+  .select(".target")  // select the elements that have the class 'target'
+  .style("stroke-width", 15) // change their style: stroke width is not equal to 8 pixels
+</script>
+			
 		}
 
 
