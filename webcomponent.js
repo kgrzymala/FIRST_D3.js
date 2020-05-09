@@ -6,19 +6,25 @@
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
 <!DOCTYPE html>
-<h1>First d3.js chart in SAC BASIC v1_separated_d3_top</h1>
-<!-- Add a bit of text -->
-<p>to be investigated further</p>
-<!-- Add a svg shape. Note that the 'target' class is attributed to the circle -->
-<svg> 
-  <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
-</svg>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Components - KG</title>
+    <script src="https://d3js.org/d3.v4.js"></script>
+</head>
+<body>
+    <svg> 
+        <circle class="target" style="fill: #69b3a2" stroke="black" cx=50 cy=50 r=40></circle>
+      </svg>
 
-<script>
-d3
-  .select(".target")  // select the elements that have the class 'target'
-  .style("stroke-width", 15) // change their style: stroke width is not equal to 8 pixels
-</script>
+      <script>
+        d3
+          .select(".target")  // select the elements that have the class 'target'
+          .style("stroke-width", 8) // change their style: stroke width is not equal to 8 pixels
+        </script>
+</body>
+</html>
     `;
 
 
