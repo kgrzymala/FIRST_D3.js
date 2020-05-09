@@ -1,7 +1,4 @@
 (function()  {
-
-<!-- Load d3.js -->
-<script src="https://d3js.org/d3.v4.js"></script>
 	
 let tmpl = document.createElement('template');
     tmpl.innerHTML = `
