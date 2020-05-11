@@ -145,7 +145,7 @@
       var shadow = window.getSelection(this._shadowRoot);
       this._tagContainer = document.createElement(this._tagType);
       var theText = document.createTextNode("taki huj");
-      var element = document.getElementById("my_dataviz");
+      var element = this.shadowRoot.getElementById("my_dataviz");
       element.appendChild(d3.select('svg').selectAll('*'));
       
       this._tagContainer.appendChild(theText); 
