@@ -145,15 +145,9 @@
       var shadow = window.getSelection(this._shadowRoot);
       this._tagContainer = document.createElement(this._tagType);
       var theText = document.createTextNode("taki huj");
-      var myCircle = document.createElementNS(svgNS,"circle"); //to create a circle. for rectangle use "rectangle"
-      myCircle.setAttributeNS(null,"id","mycircle");
-      myCircle.setAttributeNS(null,"cx",100);
-      myCircle.setAttributeNS(null,"cy",100);
-      myCircle.setAttributeNS(null,"r",50);
-      myCircle.setAttributeNS(null,"fill","black");
-      myCircle.setAttributeNS(null,"stroke","none");
-
-      this._tagContainer.appendChild(myCircle);
+      var element = document.getElementById("my_dataviz");
+      element.appendChild(d3.select('svg').selectAll('*'));
+      
       this._tagContainer.appendChild(theText); 
       this._shadowRoot.appendChild(this._tagContainer);
 
