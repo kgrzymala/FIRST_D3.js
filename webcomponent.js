@@ -144,12 +144,16 @@
     redraw() {
 
       var shadow = window.getSelection(this._shadowRoot);
-      this._tagContainer = document.createElement(this._tagType);
+      
+      this._tagContainer = document.createElement("h1");
+      this._tagContainer2 = document.createElement("h2");
       //this._tagContainerCircle = this.shadowRoot.getElementById("my_dataviz");
       
       var theText = document.createTextNode("taki huj");
+      var theText2 = document.createTextNode("taki huj2");
       
       this._tagContainer.appendChild(theText); 
+      this._tagContainer.appendChild(theText2);
       //this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
       
       this._shadowRoot.appendChild(this._tagContainer);
@@ -163,3 +167,4 @@
   customElements.define('com-sap-sample-template', WidgetTemplate)
 
 })();
+2
