@@ -152,11 +152,21 @@
       
       var theText = document.createTextNode("taki huj");
       var theText2 = document.createTextNode("taki huj2");
-      var theText3 = document.createTextNode("taki huj3_body");
+      // var theText3 = document.createTextNode("taki huj3_body");
+      
+      var RECT = document.createElementNS(SVG.ns, "rect");
+        icon.setAttribute("x", l0);             // Position the square
+        icon.setAttribute("y", 20);
+        icon.setAttribute("width", 20);         // Size the square
+        icon.setAttribute("height", 20);
+        icon.setAttribute("fill", red);   // Same fill color as wedge
+        icon.setAttribute("stroke", "black");   // Same outline, too.
+        icon.setAttribute("stroke-width", "2");
+        // canvas.appendChild(icon);               // Add to the canvas
       
       this._tagContainer.appendChild(theText); 
       this._tagContainer2.appendChild(theText2);
-      this._tagContainer3.appendChild(theText3);
+      this._tagContainer3.appendChild(RECT);
       //this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
       
       this._shadowRoot.appendChild(this._tagContainer);
