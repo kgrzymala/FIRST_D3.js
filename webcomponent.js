@@ -79,8 +79,12 @@
       //console.log(this.height);
 
 
-      let shadowRoot = this.attachShadow({ mode: "open" });
-      shadowRoot.appendChild(tmpl.content.cloneNode(true));
+      // let shadowRoot = this.attachShadow({ mode: "open" });
+      // shadowRoot.appendChild(tmpl.content.cloneNode(true));
+
+      this._shadowRoot = this.attachShadow({mode: "open"});
+      this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+
       this._tagContainer;
       this._tagType = "h1";
       this._tagText = "Hello World";
