@@ -147,17 +147,21 @@
       
       this._tagContainer = document.createElement("h1");
       this._tagContainer2 = document.createElement("h2");
+      this._tagContainer2 = document.createElement("body");
       //this._tagContainerCircle = this.shadowRoot.getElementById("my_dataviz");
       
       var theText = document.createTextNode("taki huj");
       var theText2 = document.createTextNode("taki huj2");
+      var theText3 = document.createTextNode("taki huj3_body");
       
       this._tagContainer.appendChild(theText); 
       this._tagContainer2.appendChild(theText2);
+      this._tagContainer2.appendChild(theText3);
       //this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
       
       this._shadowRoot.appendChild(this._tagContainer);
       this._shadowRoot.appendChild(this._tagContainer2);
+      this._shadowRoot.appendChild(this._tagContainer3);
       // this._shadowRoot.appendChild(this._tagContainerCircle);
 
     }
