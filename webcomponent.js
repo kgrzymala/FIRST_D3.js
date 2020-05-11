@@ -28,7 +28,7 @@
       this.spaceCircles = [30,70,110,150,190];
       this.width = '500'; 
       this.height = '500';
-      this._tagType = "h1";
+      this._tagType = "svg";
       // this.svg = d3.select("body").append("svg")
       //     .attr("width", this.width)
       //     .attr("height", this.height).attr("id","testSVG").append("circle")
@@ -86,7 +86,7 @@
       this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
       this._tagContainer;
-      this._tagType = "h1";
+      this._tagType = "svg";
       this._tagText = "Hello World";
 
     }
