@@ -153,10 +153,11 @@
       var theText2 = document.createTextNode("taki huj2");
       
       this._tagContainer.appendChild(theText); 
-      this._tagContainer.appendChild(theText2);
+      this._tagContainer2.appendChild(theText2);
       //this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
       
       this._shadowRoot.appendChild(this._tagContainer);
+      this._shadowRoot.appendChild(this._tagContainer2);
       // this._shadowRoot.appendChild(this._tagContainerCircle);
 
     }
