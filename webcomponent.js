@@ -154,24 +154,24 @@
       var theText2 = document.createTextNode("taki huj2");
       // var theText3 = document.createTextNode("taki huj3_body");
       
-      var RECT = document.createElementNS(SVG.ns, "rect");
-        RECT.setAttribute("x", l0);             // Position the square
-        RECT.setAttribute("y", 20);
-        RECT.setAttribute("width", 20);         // Size the square
-        RECT.setAttribute("height", 20);
-        RECT.setAttribute("fill", red);   // Same fill color as wedge
-        RECT.setAttribute("stroke", "black");   // Same outline, too.
-        RECT.setAttribute("stroke-width", "2");
+      //var RECT = document.createElementNS(SVG.ns, "rect");
+        //RECT.setAttribute("x", l0);             // Position the square
+        //RECT.setAttribute("y", 20);
+        //RECT.setAttribute("width", 20);         // Size the square
+        //RECT.setAttribute("height", 20);
+        //RECT.setAttribute("fill", red);   // Same fill color as wedge
+        //RECT.setAttribute("stroke", "black");   // Same outline, too.
+        //RECT.setAttribute("stroke-width", "2");
         // canvas.appendChild(icon);               // Add to the canvas
       
       this._tagContainer.appendChild(theText); 
       this._tagContainer2.appendChild(theText2);
-      this._tagContainer3.appendChild(RECT);
+      //this._tagContainer3.appendChild(RECT);
       //this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
       
       this._shadowRoot.appendChild(this._tagContainer);
       this._shadowRoot.appendChild(this._tagContainer2);
-      this._shadowRoot.appendChild(this._tagContainer3);
+      //this._shadowRoot.appendChild(this._tagContainer3);
       // this._shadowRoot.appendChild(this._tagContainerCircle);
 
     }
