@@ -145,15 +145,15 @@
 
       var shadow = window.getSelection(this._shadowRoot);
       this._tagContainer = document.createElement(this._tagType);
-      this._tagContainerCircle = this.shadowRoot.getElementById("my_dataviz");
+      //this._tagContainerCircle = this.shadowRoot.getElementById("my_dataviz");
       
       var theText = document.createTextNode("taki huj");
       
       this._tagContainer.appendChild(theText); 
-      this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
+      //this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
       
       this._shadowRoot.appendChild(this._tagContainer);
-      this._shadowRoot.appendChild(this._tagContainerCircle);
+      // this._shadowRoot.appendChild(this._tagContainerCircle);
 
     }
 
