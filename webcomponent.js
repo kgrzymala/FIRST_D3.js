@@ -81,6 +81,9 @@
 
       let shadowRoot = this.attachShadow({ mode: "open" });
       shadowRoot.appendChild(tmpl.content.cloneNode(true));
+      this._tagContainer;
+      this._tagType = "h1";
+      this._tagText = "Hello World";
 
     }
     
@@ -108,6 +111,13 @@
     }
 
     redraw() {
+
+      var shadow = window.getSelection(this._shadowRoot);
+      this._tagContainer = document.createElement(this._tagType);
+      var theText = document.createTextNode(this._tagText);    
+      this._tagContainer.appendChild(theText); 
+      this._shadowRoot.appendChild(this._tagContainer);
+
     }
 
 
