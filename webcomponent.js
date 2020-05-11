@@ -40,19 +40,19 @@
       // this.circles;
 
       
-      var bodySelection = d3.select("body");
+      this.bodySelection = d3.select("body");
  
-      var svgSelection = bodySelection.append("svg")
+      this.svgSelection = this.bodySelection.append("svg")
                                           .attr("width",500)
                                           .attr("height",500)
                                           .style("border", "1px solid black");
   
-      var circles = svgSelection.selectAll("circle")
+      this.circles = this.svgSelection.selectAll("circle")
                                   .data(this.data)
                                   .enter()
                                   .append("circle"); 
         
-      var circleAttributes = circles
+      this.circleAttributes = this.circles
                                   .attr("cx", function (d) { return d * 10; })
                                   .attr("cy", function (d) { return d * 10; })
                                   .attr("r", 15)
@@ -62,7 +62,7 @@
                                       } else if (d === 20) { returnColor = "purple";
                                       } else if (d === 15) { returnColor = "yellow";
                                       } else if (d === 10) { returnColor = "pink";
-                                      } else if (d === 5) { returnColor = "blue"; }
+                                      } else if (d === 5)  { returnColor = "blue"; }
                                       return returnColor;
                                     });
     
