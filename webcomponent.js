@@ -28,6 +28,7 @@
       this.spaceCircles = [30,70,110,150,190];
       this.width = '500'; 
       this.height = '500';
+      this._tagType = "h1";
       // this.svg = d3.select("body").append("svg")
       //     .attr("width", this.width)
       //     .attr("height", this.height).attr("id","testSVG").append("circle")
@@ -39,7 +40,31 @@
       // this.circles;
 
       
-
+      var bodySelection = d3.select("body");
+ 
+      var svgSelection = bodySelection.append("svg")
+                                          .attr("width",500)
+                                          .attr("height",500)
+                                          .style("border", "1px solid black");
+  
+      var circles = svgSelection.selectAll("circle")
+                                  .data(this.data)
+                                  .enter()
+                                  .append("circle"); 
+        
+      var circleAttributes = circles
+                                  .attr("cx", function (d) { return d * 10; })
+                                  .attr("cy", function (d) { return d * 10; })
+                                  .attr("r", 15)
+                                  .style("fill", function(d) {
+                                    var returnColor;
+                                    if (d === 25) { returnColor = "red";
+                                      } else if (d === 20) { returnColor = "purple";
+                                      } else if (d === 15) { returnColor = "yellow";
+                                      } else if (d === 10) { returnColor = "pink";
+                                      } else if (d === 5) { returnColor = "blue"; }
+                                      return returnColor;
+                                    });
     
       
       
@@ -59,115 +84,14 @@
 
     }
     
-    
-    get value() {
-      return this._value;
-    }
-
     //Fired when the widget is added to the html DOM of the page
     connectedCallback() {
-      //this._firstConnection = true;      
-      //this._kg_button = document.createElement('button');
-      //this._kg_button2 = document.createElement('button');
-      // this.margin = document.createElement('p');
-      // this.shadowRoot.appendChild(this.margin);
-      //this.kg_test = this.shadowRoot.querySelectorAll("svg");
-
-      //var kgt = this.shadowRoot.getElementById('my_dataviz');
-      //console.log("elementbyID");
-      //console.log(kgt);
-      //this.test_kg = d3.selectAll("#testclass");
-      //console.log(this.test_kg);
-      
-      
-
-      this.test_kg_1 = document.getElementById("testSVG");
-      console.log("#query selector:");
-      console.log(this.test_kg_1);
-      console.log(this.svg);
-
-      //this.circles = document.data(data);
-
-      var bodySelection = d3.select("body");
-
-      var svgSelection = bodySelection.append("svg")
-                                        .attr("width",500)
-                                        .attr("height",500)
-                                        .style("border", "1px solid black");
-
-      // var circleSelection = svgSelection.append("circle")
-      //                                     .attr("cx", 25)
-      //                                     .attr("cy", 25)
-      //                                     .attr("r", 25)                                          
-      //                                     .style("fill", "purple");
-
-      var circles = svgSelection.selectAll("circle")
-                                .data(this.data)
-                                .enter()
-                                .append("circle"); 
-      
-      var circleAttributes = circles
-                                .attr("cx", function (d) { return d * 10; })
-                                .attr("cy", function (d) { return d * 10; })
-                                .attr("r", 15)
-                                .style("fill", function(d) {
-                                  var returnColor;
-                                  if (d === 25) { returnColor = "red";
-                                    } else if (d === 20) { returnColor = "purple";
-                                    } else if (d === 15) { returnColor = "yellow";
-                                    } else if (d === 10) { returnColor = "pink";
-                                    } else if (d === 5) { returnColor = "blue"; }
-                                    return returnColor;
-                                  });
-
-      console.log(circles);                                
-
-      // this.shadowRoot.appendChild(this.svg);
-
-      // this.circles.enter().append("circle").attr("cx",200).attr("cy",200).attr("r",100),attr("fill","red");  
-     
-      //console.log("wszystkie prostokaty");
-      //console.log(d3.selectAll(this.kg_test));
-
-      //this.test_kg_1 = this.querySelectorAll("#my_dataviz");
-      //console.log("#query selector:");
-      //console.log(this.test_kg_1);
-      //this.test_kg = d3.select("rect");
-      //console.log("#d3_select:");
-      //console.log(this.test_kg);
-
-         
-      
-      // this.kgt.append("circle")
-      // .attr("cx", 250)
-      // .attr("cy", 50)
-      // .attr("r", 50)
-      // .attr("fill", "blue")
-      // .attr("opacity", 0.5);
-
-      // this.circle= svg.append("circle")
-      // .attr("cx", 350)
-      // .attr("cy", 100)
-      // .attr("r", 30)
-      // .attr("fill", "green")
-      // .attr("opacity", 0.4);
-    
-      // console.log(querySelectorAll("#testsvg"));
 
 
-      //console.log();
-      //console.log(this.svg);
-    
-      
-      
-      // this.shadowRoot.appendChild(this.svg);
-      // this.shadowRoot.appendChild(this.circle);
-     
-      
-      // const kg_test = this.shadowRoot.querySelectorAll('button');
-      // console.log("test_kg");
-      // console.log(kg_test);
-      this.redraw();
+    // this.shadowRoot.appendChild(this.svg);
+    // this.shadowRoot.appendChild(this.circle);            
+
+    this.redraw();
       
     }
 
