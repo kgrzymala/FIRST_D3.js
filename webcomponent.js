@@ -86,7 +86,7 @@
       this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
       this._tagContainer;
-      this._tagType = "h1";
+      this._tagType = "svg";
       this._tagText = "Hello World";
 
     }
