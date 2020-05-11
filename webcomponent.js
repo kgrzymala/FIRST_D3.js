@@ -28,7 +28,7 @@
       this.spaceCircles = [30,70,110,150,190];
       this.width = '500'; 
       this.height = '500';
-      
+      this._tagType = "h1";
       // this.svg = d3.select("body").append("svg")
       //     .attr("width", this.width)
       //     .attr("height", this.height).attr("id","testSVG").append("circle")
@@ -86,7 +86,7 @@
       this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
       this._tagContainer;
-      this._tagType = "circle";
+      this._tagType = "h1";
       this._tagText = "Hello World";
 
     }
@@ -111,6 +111,32 @@
       if (this._firstConnection) {
         this.redraw();
       }
+
+      this.bodySelection = d3.select("body");
+ 
+      this.svgSelection = this.bodySelection.append("svg")
+                                          .attr("width",500)
+                                          .attr("height",500)
+                                          .style("border", "1px solid black");
+  
+      this.circles = this.svgSelection.selectAll("circle")
+                                  .data(this.data)
+                                  .enter()
+                                  .append("circle"); 
+        
+      this.circleAttributes = this.circles
+                                  .attr("cx", function (d) { return d * 10; })
+                                  .attr("cy", function (d) { return d * 10; })
+                                  .attr("r", 15)
+                                  .style("fill", function(d) {
+                                    var returnColor;
+                                    if (d === 25) { returnColor = "red";
+                                      } else if (d === 20) { returnColor = "purple";
+                                      } else if (d === 15) { returnColor = "yellow";
+                                      } else if (d === 10) { returnColor = "pink";
+                                      } else if (d === 5)  { returnColor = "blue"; }
+                                      return returnColor;
+                                    });
 
     }
 
