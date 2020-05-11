@@ -86,6 +86,7 @@
       this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
 
       this._tagContainer;
+      this._tagContainerCircle;
       this._tagType = "body";
       this._tagText = "Hello World";
 
@@ -144,12 +145,15 @@
 
       var shadow = window.getSelection(this._shadowRoot);
       this._tagContainer = document.createElement(this._tagType);
+      this._tagContainerCircle = this.shadowRoot.getElementById("my_dataviz");
+      
       var theText = document.createTextNode("taki huj");
-      var element = this.shadowRoot.getElementById("my_dataviz");
-      element.appendChild(d3.select('svg').selectAll('*'));
       
       this._tagContainer.appendChild(theText); 
+      this._tagContainerCircle.appendChild(d3.select('svg').selectAll('*')); 
+      
       this._shadowRoot.appendChild(this._tagContainer);
+      this._shadowRoot.appendChild(this._tagContainerCircle);
 
     }
 
