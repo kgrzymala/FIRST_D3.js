@@ -14,9 +14,10 @@
    <circle cx="330" cy="130" r="50" fill="pink"> </circle>
    <line x1="340" y1="130" x2="380" y2="130" style="stroke:#000; stroke-width:5"> </line>
 </svg>
-    </body>
-  <p id="myclass">First paragraph</p>
+<p id="myclass">First paragraph</p>
   <p>Second paragraph</p>
+    </body>
+  
       `
     ;
 
