@@ -5,6 +5,16 @@
   // external library end
   let tmpl = document.createElement('template');
   tmpl.innerHTML = `
+    <body>
+   <svg width="2000" height="2000">
+   <circle cx="80" cy="80" r="50" fill="pink"></circle>
+   <rect width="250" height="100" x="80" y="80" fill="pink" stroke="round" style="stroke-linecap:round">
+   </rect> 
+   <circle cx="80" cy="180" r="50" fill="pink">  </circle>
+   <circle cx="330" cy="130" r="50" fill="pink"> </circle>
+   <line x1="340" y1="130" x2="380" y2="130" style="stroke:#000; stroke-width:5"> </line>
+</svg>
+    </body>
   <p id="myclass">First paragraph</p>
   <p>Second paragraph</p>
       `
